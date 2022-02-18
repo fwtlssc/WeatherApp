@@ -4,9 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <title>Weather App</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Weather Eye</h1>
+        <p>See the weather anywhere</p>
+        <div class="clouds-1">
+            <img src="./img/cloud-1.png">
+            <img src="./img/cloud-3.png">
+            <img src="./img/cloud-2.png">
+            <img src="./img/cloud-1.png">
+            <img src="./img/cloud-2.png">
+            <img src="./img/cloud-2.png">
+            <img src="./img/cloud-3.png">
+            <img src="./img/cloud-2.png">
+        </div>
+        <div class="clouds-2">
+                <img src="./img/cloud-1.png">
+                <img src="./img/cloud-2.png">
+                <img src="./img/cloud-1.png">
+                <img src="./img/cloud-3.png">
+                <img src="./img/cloud-3.png">
+                <img src="./img/cloud-2.png">
+                <img src="./img/cloud-2.png">
+                <img src="./img/cloud-3.png">
+                <img src="./img/cloud-2.png">
+                <img src="./img/cloud-2.png">
+            </div>
+    </header>
+    <main>
+        <div class="form-group city-choose">
+            <label for="city">
+                Choose a city to display its current weather
+            </label>
+            <select name="city" id="city">
+                <option value="default" selected disabled>Choose City</option>
+               
+            </select>
+        </div>
+        <section id="section-weather-details">
+            <div class="weather-card">
+                <div class="card-header">
+                    <h2>Select a city from the list above</h2>
+                    <div class="details d-none">
+                        <p class="description"></p>
+                        <div class="temperature">
+                            <p class="celsius">
+                                <span class="value"></span><span>&deg;C</span>
+                            </p>
+                            <span>/</span>
+                            <p class="fahrenheit">
+                                <span class="value"></span><span>&deg;F</span>
+                            </p>
+                        </div>
+                        <div class="date"></div>
+                    </div>
+            </div>
+            <div class="card-body">
+                <div class="img-container">
+                    <img src="./img/fresh-snow.png" alt="weather descriptive image">
+                    <div class="spinner-container d-none">
+                        <div class="spinner"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </main>
+    <script src="./index.js"></script>
 </body>
 </html>
