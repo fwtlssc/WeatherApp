@@ -98,7 +98,20 @@ async function setWeather(city) {
         descriptionColumn.classList.remove("d-none");
     } catch (error) {
         console.log(error);
+        cityName.textContent = "Error occured please choose another city";
+        clearWeatherCard();
     }
+}
+
+function clearWeatherCard(){
+    description.textContent = "";
+    celsiusTemperature.textContent = "";
+    fahrenheitTemperature.textContent = "";
+    date.textContent = "";
+    weatherImageContainer.classList.remove("loading");
+    weatherImageSpinner.classList.add("d-none");
+    weatherImage.setAttribute("src", "");
+    descriptionColumn.classList.add("d-none");
 }
 
 function celsiusToFahrenheit(temperature) {
